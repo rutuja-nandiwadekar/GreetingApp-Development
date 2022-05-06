@@ -82,6 +82,17 @@ public class GreetingController {
 
     /**
      * UC7
+     * @Purpose: Ability for the Greeting App to Edit a Greeting Messages in the Repository
+     * @URL: http://localhost:8080/edit/1?name=ritzyyyyy
+     * @Output: Edit message at position Id
+     */
+    @PutMapping("/edit/{id}")
+    public Greeting editGreetingById(@PathVariable long id, @RequestParam String name){
+        return greetingService.editGreetingById(id, name);
+    }
+
+    /**
+     * UC8
      * @Purpose: Ability for the Greeting App to delete a Greeting Messages in the Repository
      * @URL: http://localhost:8080/delete/3
      * @Output: Delete's message at position Id 3
@@ -90,6 +101,8 @@ public class GreetingController {
     public List<Greeting> deleteGreetingById(@PathVariable Long id){
         return greetingService.deleteGreetingById(id);
     }
+
+
 }
 
 

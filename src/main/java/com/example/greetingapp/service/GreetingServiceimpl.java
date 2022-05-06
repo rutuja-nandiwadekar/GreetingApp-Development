@@ -32,13 +32,22 @@ public class GreetingServiceimpl implements GreetingService{
         return greetingRepository.findById(id).get();
     }
 
-    //UC5
+    //UC6
     @Override
     public List<Greeting> getAll() {
         return greetingRepository.findAll();
     }
 
-    //uc7
+    //7
+    @Override
+    public Greeting editGreetingById(long id, String name) {
+        Greeting greeting = greetingRepository.findById(id).get();
+        greeting.setMessage(name);
+        greetingRepository.save(greeting);
+        return greeting;
+    }
+
+    //uc8
     @Override
     public List<Greeting> deleteGreetingById(Long id) {
         greetingRepository.deleteById(id);
