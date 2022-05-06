@@ -20,9 +20,19 @@ public class GreetingController {
     /**
      * UC2 Extend reetingController to use Services Layer to get Simple Greeting message ”Hello World”
      * http://localhost:8080/greeting
-     * @return : {
+     * @Output: {
      *     "id": 1,
      *     "message": "Hello, world!"
+     * }
+     *
+     * UC3 Ability for the Greeting App to give Greeting message with
+     * 1. User First Name and Last Name or
+     * 2. With just First Name or Last Name based on User attributes provides or
+     * 3. Just Hello World.
+     * http://localhost:8080/greeting?name=rutuja&name=nandiwadekar
+     * @Output:{
+     *     "id": 3,
+     *     "message": "Hello, rutuja,nandiwadekar!"
      * }
      */
     @GetMapping("/greeting")
