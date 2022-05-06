@@ -34,6 +34,8 @@ public class GreetingController {
      *     "id": 3,
      *     "message": "Hello, rutuja,nandiwadekar!"
      * }
+     *
+     * UC4 Ability for the Greeting App to save the Greeting Message in the Repository
      */
     @GetMapping("/greeting")
     public Greeting greeting(@RequestParam(value = "name",defaultValue = "world") String name){
