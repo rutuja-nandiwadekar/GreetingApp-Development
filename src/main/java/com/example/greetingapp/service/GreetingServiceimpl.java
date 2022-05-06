@@ -37,4 +37,11 @@ public class GreetingServiceimpl implements GreetingService{
     public List<Greeting> getAll() {
         return greetingRepository.findAll();
     }
+
+    //uc7
+    @Override
+    public List<Greeting> deleteGreetingById(Long id) {
+        greetingRepository.deleteById(id);
+        return greetingRepository.findAll();
+    }
 }

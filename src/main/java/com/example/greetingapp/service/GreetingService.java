@@ -11,4 +11,6 @@ public interface GreetingService {
 
     List<Greeting> getAll();
 
+    List<Greeting> deleteGreetingById(Long id);
+
 }
